@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset default margin, padding, and scrollbar width */
+body {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: 0;
+}
+
+/* Main container styling */
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Left panel styling */
+.left {
+  flex-grow: 0.5;
+  max-width: 25%;
+  background-color: #495057;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Middle panel styling */
+.middle {
+  flex-grow: 3;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Poppins;
+  padding-top: 20px;
+}
+
+/* Right panel styling */
+.right {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9ecef;
+}
+
+/* Image styling within the right panel */
+.right > img {
+  width: 150px;
+  max-height: 250px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Image hover effect */
+.right > img:hover {
+  background-color: #dee2e6;
+}
+
+/* Heading styling for left panel */
+.left > h1 {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: Poppins;
+}
+
+/* Facial component button styling */
+.component {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 95px;
+  height: 95px;
+  background-color: #ced4da;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  cursor: pointer;
+}
+
+/* Facial component hover effect */
+.component:hover {
+  background-color: #adb5bd;
+}
+
+/* Image styling inside components */
+.component-img {
+  height: 45px;
+  width: 45px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Component label styling */
+.compnent-tag {
+  font-family: Poppins;
+  font-size: 14px;
+}
+
+/* Background images for each facial component */
+.c-head {
+  background-image: url("file:///assets/Default/head/01.png");
+}
+.c-eyes {
+  background-image: url("file:///assets/Default/eyes/01.png");
+}
+.c-eyebrows {
+  background-image: url("file:///assets/Default/eyebrows/01.png");
+}
+.c-hair {
+  background-image: url("file:///assets/Default/hair/01.png");
+}
+.c-lips {
+  background-image: url("file:///assets/Default/lips/02.png");
+}
+.c-nose {
+  background-image: url("file:///assets/Default/nose/01.png");
+}
+.c-mustach {
+  background-image: url("file:///assets/Default/mustach/01.png");
+}
+.c-more {
+  background-image: url("file:///assets/Default/more/01.png");
+}
+
+/* Canvas container styling */
+#canvas-container {
+  position: relative;
+  box-shadow: 0 0 5px 1px black;
+  margin: 10px auto;
+  border: 5px solid transparent;
+}
+
+/* Canvas container styling when dragging */
+#canvas-container.over {
+  border: 5px dashed cyan;
+}
+
+/* Draggable image styling */
+#images img.img_dragging {
+  opacity: 0.4;
+}
+
+/* Styling for draggable elements to prevent text selection */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+  cursor: move;
+}
+
+/* Action button container styling */
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+/* General action button styling */
+.action-btn {
+  font-family: Poppins, sans-serif;
+  justify-content: center;
+  background-color: #495057;
+  margin-top: 26px;
+  width: 90px;
+  max-width: 100%;
+  color: #fff;
+  white-space: nowrap;
+  padding: 11px 43px;
+  cursor: pointer;
+}
+
+/* Action button hover effect */
+.action-btn:hover {
+  background-color: #1a1a1a;
+}
+
+/* Specific styling for the exit button */
+#exit {
+  background-color: #d62828;
+  color: #fff;
+}
+
+/* Styling for the dropdown button */
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Hover and focus effects for the dropdown button */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+/* Dropdown content container styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Styling for links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change background color of dropdown button when dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

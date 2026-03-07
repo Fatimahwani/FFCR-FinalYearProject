@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Title -->
+    <title>Image Recognition</title>
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="recognition.css" />
+  </head>
+  <body>
+    <!-- Heading -->
+    <h1>Image Recognition</h1>
+    <!-- Section to display the current status of the process -->
+    <div id="results-info">
+      <div id="process-indicator" style="color: gray; border: 1px solid gray">
+        Upload Image
+      </div>
+    </div>
+
+    <!-- Container for the main layout -->
+    <div class="container" id="container">
+      <!-- Left panel: For capturing or uploading images -->
+      <div id="left-panel">
+        <!-- Controls for capturing image or uplading file -->
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <!-- Button to start camera for captuing an image -->
+          <button
+            id="startCamera"
+            style="
+              margin-top: 0;
+              background-color: #4caf50;
+              color: white;
+              padding: 10px 20px;
+              font-size: 16px;
+              font-weight: bold;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            "
+          >
+            Capture Image
+          </button>
+
+          <!-- Divider -->
+          <p style="margin: 10px; color: gray">--- or ---</p>
+
+          <!-- Input for uploading an image file -->
+          <input type="file" id="imageUpload" />
+        </div>
+
+        <!-- Area to display the preview of the selected or captured image -->
+        <div id="imagePreview"></div>
+
+        <!-- Button to make recognition -->
+        <button id="sendImage">Send Image</button>
+
+        <!-- Loader to show during processing -->
+        <div id="loader"></div>
+
+        <!-- Video element for live camera feed (Hidden by default) -->
+        <video
+          id="video"
+          width="640"
+          height="300"
+          autoplay
+          style="display: none; margin-top: 20px"
+        ></video>
+
+        <!-- Button to capture an image from the video feed (hidden by default) -->
+        <button id="captureImage" style="display: none" class="capture-button">
+          <img
+            src="../../../../assets/images/aperture.png"
+            alt="Shutter"
+            id="captureImageIcon"
+          />
+        </button>
+
+        <!-- Canvas element used to capure a snapshot from the video feed -->
+        <canvas
+          id="canvas"
+          width="640"
+          height="480"
+          style="display: none"
+        ></canvas>
+      </div>
+
+      <!-- Right pannel -->
+      <div id="right-panel">
+        <!-- Person details will be displayed here -->
+      </div>
+    </div>
+
+    <!-- Instructions pannel -->
+    <div id="instructions-panel">
+      <h3>Instructions</h3>
+      <h4>Confidence Score</h4>
+      <p>
+        The confidence score indicates how confident the system is about the
+        recognition result:
+      </p>
+      <ul>
+        <li style="color: green">
+          Confidence &lt; 0.5: High confidence (correct identification)
+        </li>
+        <li style="color: red">
+          Confidence &gt; 0.5: Low confidence (possible mismatch)
+        </li>
+      </ul>
+    </div>
+
+    <!-- Link to js file to handle logic -->
+    <script src="./recognition.js"></script>
+  </body>
+</html>
