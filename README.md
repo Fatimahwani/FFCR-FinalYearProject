@@ -96,6 +96,7 @@ The `.gitignore` file specifies the files and directories that should be ignored
  - temporary files
  - system-generated files
  - cached datasets
+   
 This helps maintain a clean repository.
 
 ---
