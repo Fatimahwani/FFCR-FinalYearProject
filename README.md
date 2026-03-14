@@ -3,8 +3,8 @@
 The **Forensic Facial Sketch Construction and Recognition (FFCR)** project is a deep learning–based system designed to construct facial sketches from images and recognize individuals by analyzing visual facial features. The system integrates image processing, machine learning techniques, and a web-based interface to provide an interactive platform for facial recognition and identification.
 
 The architecture of the system consists of two main components:
- -Backend processing for image analysis and recognition
- -A frontend interface that allows users to interact with the system and visualize results.
+ - Backend processing for image analysis and recognition
+ - A frontend interface that allows users to interact with the system and visualize results.
 
 This repository contains the complete source code and assets for the Final Year Project titled **Forensic Facial Sketch Construction and Recognition (FFCR)**.
 
@@ -30,9 +30,9 @@ Key components:
 
 - **Flask Server**: Handles HTTP requests, image uploads, and responses.
 - **Image Processing Scripts**: Python-based scripts process input images and perform operations      such as:
-  -Feature extraction
-  -Sketch generation
-  -Facial recognition
+  - Feature extraction
+  - Sketch generation
+  - Facial recognition
 - **Database Management**: Interacts with MongoDB to store and retrieve recognized person details.
 
 ### Desktop
@@ -49,8 +49,8 @@ This directory includes various utility scripts used for preprocessing the datas
 
 1. **processDataSet.py**:
 
-   - Converts images to sketches.
-   - Applies preprocessing like contrast adjustment.
+   - Converts facial images to sketches.
+   - Applies enhancement techniques like contrast adjustment.
    - Saves both the original and processed images.
 
 2. **resize.py**:
@@ -78,8 +78,24 @@ Similar to the `test_DataSet_Summary.txt`, this file summarizes the training dat
 
 - **Total Image Count**: Number of images used for training.
 
+### Technologies Used
+ - Python
+ - Flask
+ - MongoDB
+ - Deep Learning libraries for facial recognition
+
+### Applications
+The FFCR system demonstrates potential applications in:
+  - Forensic investigations
+  - Identity verification systems
+  - Security and surveillance technologies
+
 ### .gitignore
 
 The `.gitignore` file specifies the files and directories that should be ignored by version control to maintain a clean repository. This typically includes:
+ - temporary files
+ - system-generated files
+ - cached datasets
+This helps maintain a clean repository.
 
 ---
